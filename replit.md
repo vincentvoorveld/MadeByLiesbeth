@@ -1,120 +1,174 @@
-# Made By Liesbeth Portfolio Website
+# Made By Liesbeth - Portfolio Website
 
 ## Overview
+A beautiful, responsive single-page portfolio website showcasing handmade jewelry (armbanden) and crocheted toys (gehaakte knuffels) by Liesbeth. The site features a warm burgundy color scheme, elegant Poppins typography, and smooth user interactions.
 
-This is a single-page portfolio website for "Made By Liesbeth," showcasing handmade jewelry (bracelets) and crocheted toys. The website features a warm, elegant aesthetic with burgundy (#800020) as the primary brand color. Built as a static portfolio with smooth scrolling navigation between sections, the site emphasizes visual storytelling through product galleries and customer testimonials.
+## Project Information
+- **Type**: Static portfolio website (React SPA)
+- **Status**: ✅ Complete and tested
+- **Language**: Dutch (nl)
+- **Created**: November 2025
 
-The application is built using React with TypeScript on the frontend, Express on the backend, and uses shadcn/ui components styled with Tailwind CSS following the "new-york" design system.
+## Features
 
-## User Preferences
+### Completed Features
+1. **Sticky Header Navigation**
+   - Burgundy (#800020) header with white text
+   - Logo: "Made By Liesbeth"
+   - 9 navigation items with smooth scrolling
+   - Responsive hamburger menu for mobile
 
-Preferred communication style: Simple, everyday language.
+2. **Hero Section**
+   - Full-width hero image with dark overlay
+   - Welcome message and description
+   - Call-to-action button scrolling to products
 
-## System Architecture
+3. **Product Galleries**
+   - **Armbanden (Bracelets)**: 8 product images
+   - **Gehaakte Knuffels (Crocheted Toys)**: 7 product images
+   - Responsive grid: 4 columns (desktop) → 2 columns (tablet) → 1 column (mobile)
+   - Lightbox functionality for enlarged image viewing
 
-### Frontend Architecture
+4. **Reviews Section**
+   - 3 customer testimonials
+   - Card-style layout with names
 
-**Framework & Language**: React 18 with TypeScript, using functional components and hooks
+5. **Werkwijze (Process)**
+   - 3-step workflow with icons
+   - Clear explanation of custom order process
 
-**Routing**: Wouter for lightweight client-side routing (though primarily a single-page application with anchor-based navigation)
+6. **Inspiratie (Inspiration)**
+   - 3 lifestyle photos with captions
+   - Gift ideas and seasonal inspiration
 
-**State Management**: 
-- TanStack Query (React Query) for server state management
-- React hooks (useState, useEffect) for local component state
-- No global state management library needed due to simple application scope
+7. **Contact Section**
+   - Email button (mailto:madebyliesbeth@example.com)
+   - WhatsApp button (opens WhatsApp chat)
+   - Visual contact form (name, email, message)
 
-**Styling Approach**:
-- Tailwind CSS for utility-first styling
-- Custom design tokens defined in CSS variables for consistent theming
-- shadcn/ui component library (new-york variant) for pre-built, accessible UI components
-- Poppins font family from Google Fonts for typography
-- Responsive design with mobile-first breakpoints
+8. **FAQ Section**
+   - 5 accordion items with common questions
+   - Single-expand behavior
 
-**Component Structure**:
-- Single-page layout with scrollable sections (Hero, Armbanden, Gehaakte Knuffels, Reviews, Werkwijze, Inspiratie, Contact, FAQ, About)
-- Sticky header navigation with hamburger menu for mobile
-- Image lightbox/dialog functionality for product galleries
-- Accordion component for FAQ section
-- Form components (Input, Textarea) for contact section
+9. **About Section**
+   - Liesbeth's portrait photo
+   - Personal bio explaining passion for handcraft
 
-**Build System**: Vite for fast development and optimized production builds
+10. **Footer**
+    - Copyright text: "© 2025 Made By Liesbeth | Handgemaakt met liefde"
+    - Burgundy background matching header
 
-### Backend Architecture
+11. **Interactive Features**
+    - Smooth scrolling between sections
+    - Scroll-to-top button (appears after scrolling)
+    - Lightbox modal with accessibility support
+    - Mobile-optimized interactions
 
-**Server Framework**: Express.js running on Node.js
+## Technical Stack
 
-**API Design**: RESTful API structure with `/api` prefix (currently minimal endpoints as this is primarily a static portfolio)
-
-**Development Tools**:
-- tsx for TypeScript execution in development
-- esbuild for backend bundling in production
-- Hot module replacement via Vite in development
-
-**Session Management**: Infrastructure in place for session handling (connect-pg-simple), though not actively used in current static portfolio implementation
-
-### Data Storage
-
-**Database**: PostgreSQL via Neon serverless database
-
-**ORM**: Drizzle ORM for type-safe database operations
-
-**Schema Management**:
-- Schema definitions in `shared/schema.ts` for shared types between frontend and backend
-- Migration files stored in `./migrations` directory
-- Drizzle Kit for schema pushing and migration management
-
-**Current Schema**: Minimal user table (id, username, password) - likely for future admin functionality
-
-**Storage Interface**: Abstracted through `IStorage` interface with in-memory implementation (MemStorage) and potential for database-backed implementation
+### Frontend
+- React 18 with TypeScript
+- Tailwind CSS for styling
+- Shadcn UI components (Button, Card, Dialog, Accordion, Input, Textarea)
+- Lucide React icons
+- Wouter for routing
 
 ### Design System
+- **Primary Color**: Burgundy #800020 (hsl(345, 100%, 25%))
+- **Font**: Poppins (Google Fonts)
+- **Aesthetic**: Warm, elegant, feminine
+- **Layout**: Single-page with smooth scrolling navigation
 
-**Color Palette**:
-- Primary: Burgundy (#800020 / HSL 345 100% 25%)
-- Warm neutrals and soft backgrounds throughout
-- Design tokens use HSL color space with CSS custom properties for easy theming
+### Key Components
+- `client/src/pages/home.tsx` - Main portfolio page with all sections
+- `client/src/index.css` - Burgundy color scheme configuration
+- `client/index.html` - SEO metadata and Poppins font
 
-**Typography**:
-- Primary font: Poppins
-- Font weights: 300, 400, 500, 600, 700
-- Fallback: sans-serif system fonts
+## Project Structure
+```
+client/
+├── src/
+│   ├── pages/
+│   │   └── home.tsx          # Main portfolio page
+│   ├── components/ui/         # Shadcn UI components
+│   ├── index.css              # Global styles & colors
+│   └── App.tsx                # App router
+├── index.html                 # HTML entry point
+attached_assets/
+└── generated_images/          # 20 AI-generated product images
+```
 
-**Spacing System**: Tailwind's default spacing scale (2, 4, 6, 8, 12, 16, 20 units)
+## Responsive Breakpoints
+- **Mobile**: < 640px (1 column)
+- **Tablet**: 640px - 1023px (2 columns)
+- **Desktop**: ≥ 1024px (4 columns)
 
-**Component Variants**:
-- Button variants: default, destructive, outline, secondary, ghost
-- Button sizes: default (h-9), sm (h-8), lg (h-10), icon
-- Consistent border radius: lg (9px), md (6px), sm (3px)
+## Navigation Sections
+1. Home (Hero)
+2. Armbanden (Bracelets)
+3. Gehaakte Knuffels (Crocheted Toys)
+4. Reviews (Customer Testimonials)
+5. Werkwijze (Process/How It Works)
+6. Inspiratie (Inspiration Gallery)
+7. Contact (Email, WhatsApp, Form)
+8. Veelgestelde vragen (FAQ)
+9. Over Made By Liesbeth (About)
 
-**Elevation/Shadow System**: Custom shadow utilities (shadow-2xs, etc.) with hover and active state elevations
+## Testing
+Comprehensive end-to-end testing completed:
+- ✅ Desktop responsive layout (1920x1080)
+- ✅ Tablet responsive layout (768x1024)
+- ✅ Mobile responsive layout (375x667)
+- ✅ Smooth scrolling navigation
+- ✅ Lightbox image viewer
+- ✅ Hamburger menu functionality
+- ✅ Accordion FAQ behavior
+- ✅ All interactive elements
+- ✅ Accessibility (Dialog a11y improvements)
 
-### External Dependencies
+## Accessibility
+- Semantic HTML structure
+- ARIA labels and descriptions
+- Screen reader support for lightbox (DialogTitle, DialogDescription)
+- Keyboard navigation support
+- High contrast burgundy/white color scheme
 
-**UI Component Libraries**:
-- Radix UI primitives for accessible, unstyled components (accordion, dialog, dropdown, navigation, popover, scroll-area, select, tabs, toast, tooltip, etc.)
-- Embla Carousel for potential carousel functionality
-- cmdk for command palette functionality
-- Lucide React for icon components
+## Images
+20 AI-generated placeholder images:
+- 1 hero banner (16:9)
+- 8 bracelet product photos (1:1)
+- 7 crocheted toy photos (1:1)
+- 3 inspiration lifestyle photos (4:3)
+- 1 portrait of Liesbeth (3:4)
 
-**Form Handling**:
-- React Hook Form for form state management
-- @hookform/resolvers for validation schema integration
-- Zod for runtime type validation
-- drizzle-zod for generating Zod schemas from Drizzle ORM schemas
+## Running the Application
+```bash
+npm run dev
+```
+Server runs on port 5000 with Vite HMR for development.
 
-**Utilities**:
-- clsx and tailwind-merge (via cn utility) for conditional className composition
-- class-variance-authority for component variant management
-- date-fns for date formatting and manipulation
+## Recent Changes
+- **2025-11-08**: Initial creation
+  - Configured burgundy color scheme
+  - Generated all product images
+  - Built all sections with responsive design
+  - Implemented smooth scrolling and lightbox
+  - Added FAQ accordion and mobile menu
+  - Completed accessibility improvements
+  - Passed comprehensive e2e testing
 
-**Development Tools**:
-- @replit/vite-plugin-runtime-error-modal for better error display
-- @replit/vite-plugin-cartographer for Replit-specific development features
-- @replit/vite-plugin-dev-banner for development environment indicators
+## User Preferences
+- Dutch language (nl) content
+- Warm, elegant aesthetic
+- Burgundy accent color (#800020)
+- Poppins typography
+- Single-page portfolio layout
+- Mobile-first responsive design
 
-**Database & Backend**:
-- @neondatabase/serverless for PostgreSQL connection
-- drizzle-orm and drizzle-kit for database operations
-- connect-pg-simple for PostgreSQL session storage
-
-**Assets**: Generated images stored in `attached_assets/generated_images/` directory including hero banner, product photos (bracelets and crocheted toys), inspiration photos, and portrait
+## Future Enhancements (Not in MVP)
+- Backend for actual contact form submission
+- Product inventory management
+- Shopping cart functionality
+- Admin panel for content updates
+- Image optimization and lazy loading
+- Multi-language support (EN/NL)
