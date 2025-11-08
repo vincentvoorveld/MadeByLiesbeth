@@ -1,0 +1,82 @@
+Maak een complete statische website voor **Made by Lies**, een creatief portfolio voor handgemaakte sieraden en gehaakte knuffels.
+
+💡 ALGEMEEN
+- Gebruik HTML, CSS en optioneel een klein beetje JavaScript.
+- De site is één pagina (index.html) waarin het menu naar verschillende secties scrollt.
+- De site moet mobielvriendelijk zijn (responsive design).
+- Gebruik rustige, warme kleuren, vooral **burgundy rood (#800020)** voor de header en accenten.
+- Gebruik een elegant, goed leesbaar lettertype zoals "Poppins" of "Raleway".
+- Voeg smooth scrolling toe tussen menu-items en secties.
+
+📍 HEADER
+- Smalle horizontale balk bovenaan in burgundy rood met witte tekst.
+- Links het logo/naam: “Made by Lies”.
+- Rechts een navigatiemenu met deze onderdelen:
+  Home | Armbanden | Gehaakte Knuffels | Reviews | Werkwijze | Inspiratie | Contact | Veelgestelde vragen | Over Made by Lies
+- Het menu moet bij mobiel automatisch inklappen tot een “hamburger menu”.
+
+🏠 SECTIE: Home / Hero
+- Grote hero-afbeelding over de volle breedte (gebruik placeholder: `/images/hero.jpg`).
+- Overlay-tekst: “Welkom bij Made by Lies – handgemaakte sieraden en gehaakte knuffels met liefde gemaakt”.
+- Korte introductietekst en knop “Bekijk collectie” die naar het productgedeelte scrollt.
+
+💎 SECTIE: Armbanden
+- Titel: “Armbanden”
+- Grid met 3 tot 4 afbeeldingen per rij, voorbeeldafbeeldingen: `/images/armband1.jpg`, `/images/armband2.jpg`, `/images/armband3.jpg`, etc.
+- Klik op een afbeelding → vergroot (lightbox-effect).
+- Automatisch schalen naar 1 of 2 per rij op mobiel.
+
+🧸 SECTIE: Gehaakte Knuffels
+- Titel: “Gehaakte Knuffels”
+- Zelfde grid-opzet als bij armbanden, voorbeeldfoto’s `/images/knuffel1.jpg`, `/images/knuffel2.jpg`, etc.
+- Ook klikbaar om te vergroten (zelfde lightbox-functie).
+
+💬 SECTIE: Reviews
+- Titel: “Wat klanten zeggen”
+- 3 tot 4 korte klantreviews in kaartjesstijl met naam (fictief).
+  Bijvoorbeeld: “De gehaakte beer was prachtig! – Marieke”.
+
+🪡 SECTIE: Werkwijze
+- Uitleg in 3 blokken met kleine icoontjes erboven:
+  1️⃣ Idee bespreken  
+  2️⃣ Materialen kiezen  
+  3️⃣ Met liefde handgemaakt
+
+🌷 SECTIE: Inspiratie
+- Grid van sfeerfoto’s (3 naast elkaar) met korte bijschriften: “Cadeau voor een vriendin”, “Kraamcadeau”, “Lente-inspiratie”.
+
+📞 SECTIE: Contact
+- Titel: “Neem contact op”
+- Tekst: “Wil je iets bestellen of meer informatie? Neem gerust contact op via e-mail of WhatsApp.”
+- Knoppen:
+  ✉️ E-mail: opent mailto:madebylies@example.com  
+  💬 WhatsApp: opent `https://wa.me/31612345678`
+- Eventueel een klein contactformulier (naam, bericht, verzendknop – zonder backend, alleen visueel).
+
+❓ SECTIE: Veelgestelde vragen
+- Accordion-stijl lijst met 4–5 veelgestelde vragen, zoals:
+  - “Kan ik iets op maat laten maken?”
+  - “Hoe lang duurt een bestelling?”
+  - “Hoe onderhoud ik mijn sieraad?”
+
+👩‍🎨 SECTIE: Over Made by Lies
+- Foto van Lies (placeholder `/images/lies.jpg`).
+- Korte bio over haar passie voor handwerk, hoe ze begonnen is, en waarom elk stuk uniek is.
+
+📜 FOOTER
+- Donkere (burgundy) achtergrond, lichte tekst.
+- Tekst: “© 2025 Made by Lies | Handgemaakt met liefde”.
+
+📂 STRUCTUUR
+Maak een mappenstructuur:
+- index.html
+- /css/style.css
+- /js/script.js
+- /images/ (met voorbeeldafbeeldingen)
+
+🔧 EXTRA FUNCTIONALITEIT
+- Smooth scrolling voor menu.
+- Lightbox-effect voor foto’s.
+- Responsive design (max 4 kolommen → 2 op tablet → 1 op mobiel).
+- Scroll-to-top knop (optioneel).
+
