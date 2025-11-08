@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -518,6 +518,10 @@ export default function Home() {
       {/* Lightbox */}
       <Dialog open={!!lightboxImage} onOpenChange={() => setLightboxImage(null)}>
         <DialogContent className="max-w-4xl p-0 overflow-hidden" data-testid="dialog-lightbox">
+          <DialogTitle className="sr-only">Product afbeelding</DialogTitle>
+          <DialogDescription className="sr-only">
+            Vergroot productfoto voor een gedetailleerde weergave
+          </DialogDescription>
           {lightboxImage && (
             <img
               src={lightboxImage}
