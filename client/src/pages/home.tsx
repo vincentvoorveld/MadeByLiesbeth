@@ -32,6 +32,10 @@ import inspiration1 from "@assets/generated_images/Gift_for_friend_inspiration_9
 import inspiration2 from "@assets/generated_images/Baby_shower_gift_inspiration_aa7c81b8.png";
 import inspiration3 from "@assets/generated_images/Spring_inspiration_photo_7e7d3b53.png";
 import liesbethPhoto from "@assets/generated_images/Portrait_of_Liesbeth_33c45405.png";
+import oorbel1 from "@assets/Oorbellen_1_1764943043382.png";
+import oorbel2 from "@assets/Oorbellen_2_1764943043387.png";
+import oorbel3 from "@assets/Oorbellen_3_1764943043389.png";
+import oorbel4 from "@assets/Oorbellen_4_1764943043390.png";
 
 const bracelets = [
   { id: 1, image: bracelet1, alt: "Burgundy beaded bracelet" },
@@ -54,6 +58,13 @@ const knuffels = [
   { id: 7, image: knuffel7, alt: "Crocheted beige puppy" },
 ];
 
+const oorbellen = [
+  { id: 1, image: oorbel1, alt: "Driehoek oorbellen zwart roségoud" },
+  { id: 2, image: oorbel2, alt: "Druppel oorbellen crème goud" },
+  { id: 3, image: oorbel3, alt: "Ovale oorbellen blauw groen" },
+  { id: 4, image: oorbel4, alt: "Driehoek oorbellen goud" },
+];
+
 const inspirationPhotos = [
   { id: 1, image: inspiration1, caption: "Cadeau voor een vriendin" },
   { id: 2, image: inspiration2, caption: "Kraamcadeau" },
@@ -63,6 +74,7 @@ const inspirationPhotos = [
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Armbanden", href: "#armbanden" },
+  { label: "Oorbellen", href: "#oorbellen" },
   { label: "Gehaakte Knuffels", href: "#knuffels" },
   { label: "Reviews", href: "#reviews" },
   { label: "Werkwijze", href: "#werkwijze" },
@@ -202,8 +214,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Oorbellen Section */}
+      <section id="oorbellen" className="py-16 md:py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-testid="text-section-oorbellen">
+            Oorbellen
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {oorbellen.map((oorbel) => (
+              <Card
+                key={oorbel.id}
+                className="overflow-hidden cursor-pointer hover-elevate transition-all"
+                onClick={() => setLightboxImage(oorbel.image)}
+                data-testid={`card-oorbel-${oorbel.id}`}
+              >
+                <img
+                  src={oorbel.image}
+                  alt={oorbel.alt}
+                  className="w-full aspect-square object-cover"
+                  data-testid={`img-oorbel-${oorbel.id}`}
+                />
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Gehaakte Knuffels Section */}
-      <section id="knuffels" className="py-16 md:py-20 bg-muted">
+      <section id="knuffels" className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-testid="text-section-knuffels">
             Gehaakte Knuffels
